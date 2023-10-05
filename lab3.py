@@ -56,14 +56,6 @@ def areEqual(arr1: list, arr2: list):
             return True
     else:
         return False
-
-#Переведення з бітового рядка у множину
-def bitToNormal (arrbits: list, universal: list):
-    arr =[]
-    for i in range(len(arrbits)):
-        if arrbits[i]:
-            arr.append(universal[i])
-    return arr
             
 #Об'єднання
 def connecting(arr1: list, arr2: list):
@@ -129,6 +121,7 @@ def dekartMultiply(arr1: list, arr2: list):
     print(f"Декартовий добуток цих множин:\n{final}")
     return final     
 
+#Перетворення у бітовий рядок
 def bitline(arr1: list, arr2: list, universal: list):
     arr1bits = []
     arr2bits = []
@@ -146,6 +139,13 @@ def bitline(arr1: list, arr2: list, universal: list):
     print(f"Бітовий рядок для другої множини: {arr2bits}")
     return arr1bits, arr2bits
 
+#Переведення з бітового рядка у множину
+def bitToNormal (arrbits: list, universal: list):
+    arr =[]
+    for i in range(len(arrbits)):
+        if arrbits[i]:
+            arr.append(universal[i])
+    return arr
 
 def bitoperations(arr1bits: list, arr2bits: list, universal: list):
     #Об'єднання
